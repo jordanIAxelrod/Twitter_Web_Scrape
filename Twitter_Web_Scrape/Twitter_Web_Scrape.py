@@ -52,7 +52,7 @@ async def add_twitter_to_df(df):
                     )
                 
                 )
-        df[df['twitter'] != None] = await asyncio.gather(*tasks)
+        await asyncio.gather(*tasks)
     return df
 
 def twitter_scrape(url):
